@@ -51,38 +51,30 @@ body{
 .paint-bg .splat[class*="sp-15"],
 .paint-bg .splat[class*="sp-16"]{aspect-ratio:80/1800}
 
-/* Big blue splashes — never rotated so drips fall correctly */
-.sp-1{width:380px;top:-8%;left:-6%;opacity:.85;
+/* Left column — 3 splashes, well-spaced top to bottom */
+.sp-1{width:360px;top:0%;left:-6%;opacity:.85;
   animation:drift1 30s ease-in-out infinite alternate;}
-.sp-3{width:340px;top:32%;left:-8%;opacity:.78;
+.sp-3{width:300px;top:38%;left:-6%;opacity:.78;
   animation:drift2 34s ease-in-out infinite alternate;}
-.sp-5{width:360px;top:64%;right:-4%;opacity:.82;
-  animation:drift3 30s ease-in-out infinite alternate;}
-/* Medium white / pale splashes */
-.sp-2{width:290px;top:6%;right:-4%;opacity:.55;
-  animation:drift2 26s ease-in-out infinite alternate;}
-.sp-4{width:200px;top:46%;right:-4%;opacity:.42;
-  animation:drift1 32s ease-in-out infinite alternate;}
-.sp-6{width:220px;top:78%;left:-4%;opacity:.36;
+.sp-6{width:240px;top:76%;left:-4%;opacity:.42;
   animation:drift3 38s ease-in-out infinite alternate;}
-/* Smaller scattered splatters — pushed to edges */
-.sp-7{width:220px;top:14%;left:-4%;opacity:.45;
-  animation:drift2 36s ease-in-out infinite alternate;}
-.sp-8{display:none}
-.sp-9{width:180px;top:0;left:-2%;opacity:.50;
-  animation:drift3 34s ease-in-out infinite alternate;}
-.sp-10{width:160px;top:22%;right:-2%;opacity:.34;
-  animation:drift2 40s ease-in-out infinite alternate;}
-.sp-11{width:170px;top:50%;right:-4%;opacity:.42;
+
+/* Right column — 3 splashes, mirrored */
+.sp-2{width:300px;top:4%;right:-6%;opacity:.62;
+  animation:drift2 26s ease-in-out infinite alternate;}
+.sp-11{width:260px;top:40%;right:-6%;opacity:.50;
   animation:drift1 28s ease-in-out infinite alternate;}
-.sp-12{display:none}
-/* Pure drips hanging from the top — kept near the edges */
-.sp-13{width:60px;top:-3%;left:8%;opacity:.65;
+.sp-5{width:340px;top:74%;right:-6%;opacity:.82;
+  animation:drift3 30s ease-in-out infinite alternate;}
+
+/* Quiet the redundant ones to avoid pile-up */
+.sp-4,.sp-7,.sp-8,.sp-9,.sp-10,.sp-12,.sp-14,.sp-16{display:none}
+
+/* One small drip per corner, well clear of the main blobs */
+.sp-13{width:50px;top:24%;left:14%;opacity:.45;
   animation:drift1 42s ease-in-out infinite alternate;}
-.sp-14{display:none}
-.sp-15{width:65px;top:-3%;right:8%;opacity:.60;
+.sp-15{width:55px;top:60%;right:14%;opacity:.45;
   animation:drift3 44s ease-in-out infinite alternate;}
-.sp-16{display:none}
 
 @keyframes drift1{
   0%  { transform:translate3d(0,0,0)       scale(1);}
