@@ -32,6 +32,24 @@ document.querySelectorAll('.section-head, .svc, .gx, .steps li, .r-card, .badge'
   io.observe(el);
 });
 
+// Quote form -> mailto with all fields encoded as body
+const qf = document.getElementById('quote-form');
+if (qf) {
+  qf.addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    const fd = new FormData(qf);
+    const lines = [];
+    for (const [k, v] of fd.entries()) lines.push(`${k}: ${v}`);
+    const body = encodeURIComponent(lines.join('\n'));
+    const subject = encodeURIComponent(`New quote request — ${fd.get('name') || 'website'}`);
+    const thanks = qf.querySelector('.q-thanks');
+    const btn = qf.querySelector('button');
+    if (thanks) thanks.classList.add('on');
+    if (btn) btn.textContent = "Opening your email…";
+    window.location.href = `mailto:hello@aceresin.com?subject=${subject}&body=${body}`;
+  });
+}
+
 // Skip the first 1s on hero bg video — start and on every loop
 const heroVid = document.querySelector('.hero-bg video');
 if (heroVid) {
