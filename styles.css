@@ -44,12 +44,12 @@ body{
   filter:drop-shadow(0 12px 18px rgba(0,0,0,.35));
   will-change:transform;
 }
-/* Splash drips hang down — generous 320x600 viewBox */
-.paint-bg .splat{aspect-ratio:320/600}
+/* Splash drips hang down — generous 320x1000 viewBox */
+.paint-bg .splat{aspect-ratio:320/1000}
 .paint-bg .splat[class*="sp-13"],
 .paint-bg .splat[class*="sp-14"],
 .paint-bg .splat[class*="sp-15"],
-.paint-bg .splat[class*="sp-16"]{aspect-ratio:80/600}
+.paint-bg .splat[class*="sp-16"]{aspect-ratio:80/1000}
 
 /* Big blue splashes — never rotated so drips fall correctly */
 .sp-1{width:380px;top:-8%;left:-6%;opacity:.85;
