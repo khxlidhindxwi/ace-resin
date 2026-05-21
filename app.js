@@ -32,19 +32,29 @@ document.querySelectorAll('.section-head, .svc, .gx, .steps li, .r-card, .badge'
   io.observe(el);
 });
 
-// Quote form -> direct user to Instagram DM (no email backend yet)
+// Quote form -> open user's email client pre-filled to Zayd
 const qf = document.getElementById('quote-form');
 if (qf) {
   qf.addEventListener('submit', (ev) => {
     ev.preventDefault();
+    const fd = new FormData(qf);
+    const labels = { name:'Name', email:'Email', phone:'Phone', zip:'Zip', type:'Project', notes:'Notes' };
+    const lines = [];
+    for (const [k, v] of fd.entries()) {
+      if (String(v).trim()) lines.push(`${labels[k] || k}: ${v}`);
+    }
+    lines.push('', '— sent from aceresin site');
+    const subject = encodeURIComponent(`Ace Resin quote — ${fd.get('name') || 'website lead'}`);
+    const body = encodeURIComponent(lines.join('\n'));
+
     const thanks = qf.querySelector('.q-thanks');
     const btn = qf.querySelector('button');
     if (thanks) {
-      thanks.textContent = "Thanks — DM us on Instagram and we'll reply same day.";
+      thanks.textContent = "Opening your email — just hit send and we'll reply within a day.";
       thanks.classList.add('on');
     }
-    if (btn) btn.textContent = "Opening Instagram…";
-    setTimeout(() => window.open('https://www.instagram.com/zayd.ace/', '_blank', 'noopener'), 400);
+    if (btn) btn.textContent = "Opening email…";
+    window.location.href = `mailto:zaydtamimi15@hotmail.com?subject=${subject}&body=${body}`;
   });
 }
 
