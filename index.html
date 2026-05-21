@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <title>Ace Resin — Luxury Epoxy Floors, Countertops & Art</title>
 <meta name="description" content="Ace Resin crafts mirror-finish epoxy floors, countertops and custom resin art. Hand-poured by master craftsmen. Lifetime-guaranteed. Free design consultation." />
-<meta name="theme-color" content="#0b0414" />
+<meta name="theme-color" content="#1f262d" />
 <meta property="og:title" content="Ace Resin — Liquid Glass for Floors, Counters & Walls" />
-<meta property="og:description" content="The country's most-requested epoxy studio. Custom pours, mirror finishes, lifetime guarantee." />
+<meta property="og:description" content="Hand-poured epoxy floors, seamless countertops and resin art. Lifetime finish guarantee." />
 <meta property="og:image" content="assets/epoxy-02.jpg" />
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -19,16 +20,7 @@
 <!-- ====== NAV ====== -->
 <header class="nav" id="nav">
   <a class="brand" href="#top" aria-label="Ace Resin home">
-    <span class="brand-mark" aria-hidden="true">
-      <svg viewBox="0 0 64 64" width="34" height="34"><defs>
-        <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#7be6ff"/><stop offset="50%" stop-color="#b478ff"/><stop offset="100%" stop-color="#ff7ad9"/>
-        </linearGradient></defs>
-        <path d="M32 4 L58 32 L32 60 L6 32 Z" fill="url(#lg)" />
-        <path d="M32 14 L48 32 L32 50 L16 32 Z" fill="#0b0414" opacity=".55"/>
-      </svg>
-    </span>
-    <span class="brand-text"><b>ACE</b> RESIN</span>
+    <img class="brand-logo" src="assets/logo.jpg" alt="Ace Resin" />
   </a>
   <nav class="nav-links" aria-label="Primary">
     <a href="#work">Work</a>
@@ -47,69 +39,56 @@
 <!-- ====== HERO ====== -->
 <section class="hero" id="top">
   <div class="hero-bg" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="grain"></div>
+    <video autoplay muted loop playsinline poster="assets/epoxy-02.jpg">
+      <source src="assets/hero-bg.mp4" type="video/mp4">
+    </video>
   </div>
 
   <div class="hero-inner">
     <div class="hero-copy">
       <div class="eyebrow">
-        <span class="dot"></span> Now booking summer 2026 — 7 slots left
+        <span class="dot"></span> Now booking — limited summer slots
       </div>
       <h1 class="display">
         Liquid glass for<br/>
         <span class="gradient-text">floors, counters &amp; walls.</span>
       </h1>
       <p class="lede">
-        Ace Resin is a master-craft epoxy studio. We hand-pour mirror-finish floors,
-        seamless countertops and gallery-grade resin art — guaranteed for life.
+        Ace Resin hand-pours mirror-finish epoxy floors, seamless countertops
+        and gallery-grade resin art. One craftsman. One pour. Built to last decades.
       </p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="#quote">
-          <span>Get my free design quote</span>
+          <span>Get my free quote</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a class="btn btn-ghost" href="#work">See the gallery</a>
+        <a class="btn btn-ghost" href="#work">See the work</a>
       </div>
 
       <ul class="trust-row" aria-label="Trust indicators">
-        <li><strong>4,200+</strong><span>pours completed</span></li>
-        <li><strong>4.97★</strong><span>Google &amp; Yelp avg.</span></li>
+        <li><strong>100<em>+</em></strong><span>pours completed</span></li>
+        <li><strong>5<em>★</em></strong><span>client reviews</span></li>
         <li><strong>Lifetime</strong><span>finish guarantee</span></li>
-        <li><strong>14-day</strong><span>install, on average</span></li>
+        <li><strong>Local</strong><span>family-run studio</span></li>
       </ul>
     </div>
 
-    <div class="hero-stage" aria-hidden="true">
-      <div class="card-stack">
-        <div class="card card-a">
-          <div class="card-img img-ocean"></div>
-          <div class="card-caption">Silver Marble · Office hallway</div>
-        </div>
-        <div class="card card-b">
-          <div class="card-img img-marble"></div>
-          <div class="card-caption">Crimson + Gold · Barber studio</div>
-        </div>
-        <div class="card card-c">
-          <div class="card-img img-galaxy"></div>
-          <div class="card-caption">Lava Pour · Garage</div>
-        </div>
-      </div>
-      <div class="floating-badge">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.6 6.6L22 9.2l-5.4 4.7L18.2 22 12 18l-6.2 4 1.6-8.1L2 9.2l7.4-.6L12 2z" fill="#ffd86b"/></svg>
-        <div><b>Master-Craft</b><span>Certified Pour Team</span></div>
-      </div>
+    <div class="hero-stage">
+      <figure class="hero-photo">
+        <img src="assets/epoxy-02.jpg" alt="Silver and black marble epoxy floor in office hallway" loading="eager" />
+        <figcaption class="hero-photo-caption">
+          <b>Featured</b><span>Silver Marble · Commercial Hallway</span>
+        </figcaption>
+      </figure>
     </div>
   </div>
 
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>★ Featured in DWELL</span><span>★ Architectural Digest</span><span>★ HGTV — Color of the Year</span>
-      <span>★ Inc. 5000 — 2025</span><span>★ Forbes Home Top 10</span><span>★ Houzz Best of Design</span>
-      <span>★ Featured in DWELL</span><span>★ Architectural Digest</span><span>★ HGTV — Color of the Year</span>
-      <span>★ Inc. 5000 — 2025</span><span>★ Forbes Home Top 10</span><span>★ Houzz Best of Design</span>
+      <span>★ Metallic Marble Pours</span><span>★ Custom Color Matching</span><span>★ Commercial &amp; Retail</span>
+      <span>★ Barber Shops &amp; Salons</span><span>★ Garages &amp; Showrooms</span><span>★ Hospitality Floors</span>
+      <span>★ Metallic Marble Pours</span><span>★ Custom Color Matching</span><span>★ Commercial &amp; Retail</span>
+      <span>★ Barber Shops &amp; Salons</span><span>★ Garages &amp; Showrooms</span><span>★ Hospitality Floors</span>
     </div>
   </div>
 </section>
@@ -119,12 +98,11 @@
   <div class="film-wrap">
     <div class="section-eyebrow">★ The Pour</div>
     <h2 class="section-title">
-      Watch a <span class="gradient-text">$48,000 floor</span> come alive
-      in 90 seconds.
+      A floor coming alive, <span class="gradient-text">in real time.</span>
     </h2>
     <p class="section-lede">
-      Every Ace Resin project is filmed in 6K so you can watch the magic happen.
-      Below: a custom ocean pour in a Hilton Head beach house, finished spring 2026.
+      No filters. No edits. Just the resin moving across a freshly prepped slab
+      under a clean coat of clear top.
     </p>
 
     <div class="video-frame">
@@ -295,28 +273,25 @@
         back every project with a transferable lifetime guarantee — written into your invoice.
       </p>
       <div class="badge-row">
-        <div class="badge"><b>10</b><span>year company<br/>warranty</span></div>
         <div class="badge"><b>∞</b><span>lifetime<br/>finish promise</span></div>
-        <div class="badge"><b>$2M</b><span>insurance<br/>per project</span></div>
-        <div class="badge"><b>0%</b><span>VOC after<br/>cure</span></div>
+        <div class="badge"><b>UV</b><span>stable<br/>no yellowing</span></div>
+        <div class="badge"><b>0%</b><span>VOC<br/>after cure</span></div>
+        <div class="badge"><b>1<small>:</small>1</b><span>owner<br/>on every pour</span></div>
       </div>
     </div>
     <div class="g-visual" aria-hidden="true">
       <div class="seal">
-        <svg viewBox="0 0 200 200" width="240" height="240">
+        <svg viewBox="0 0 200 200" width="260" height="260">
           <defs>
-            <linearGradient id="seal-g" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#7be6ff"/><stop offset="50%" stop-color="#b478ff"/><stop offset="100%" stop-color="#ff7ad9"/>
-            </linearGradient>
             <path id="circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/>
           </defs>
-          <circle cx="100" cy="100" r="92" fill="none" stroke="url(#seal-g)" stroke-width="2"/>
-          <circle cx="100" cy="100" r="78" fill="none" stroke="url(#seal-g)" stroke-width="1" opacity=".6"/>
-          <text fill="#fff" font-family="Fraunces" font-size="13" letter-spacing="6">
-            <textPath href="#circle" startOffset="0">★ ACE RESIN · LIFETIME GUARANTEE · MASTER-CRAFT POUR · EST. 2014 · </textPath>
+          <circle cx="100" cy="100" r="92" fill="none" stroke="#7bc4e0" stroke-width="2"/>
+          <circle cx="100" cy="100" r="78" fill="none" stroke="#7bc4e0" stroke-width="1" opacity=".5"/>
+          <text fill="#fff" font-family="Fraunces" font-size="12" letter-spacing="6">
+            <textPath href="#circle" startOffset="0">★ ACE RESIN · LIFETIME FINISH GUARANTEE · HAND-POURED · </textPath>
           </text>
           <g transform="translate(100 100)">
-            <path d="M-30 0 L-8 22 L34 -22" stroke="url(#seal-g)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M-30 0 L-8 22 L34 -22" stroke="#7bc4e0" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           </g>
         </svg>
       </div>
@@ -329,29 +304,29 @@
   <div class="container">
     <div class="section-head">
       <div class="section-eyebrow">★ Reviews</div>
-      <h2 class="section-title">4,200+ pours. <span class="gradient-text">Two complaints, both fixed in a day.</span></h2>
+      <h2 class="section-title">What clients <span class="gradient-text">tell us after the reveal.</span></h2>
     </div>
 
     <div class="r-grid">
       <figure class="r-card">
         <div class="stars">★★★★★</div>
-        <blockquote>"My kitchen island looks like it was carved from a single block of $40k Italian marble. It's epoxy. Nobody believes me."</blockquote>
-        <figcaption>— Priya R., Aspen CO · Calacatta Island</figcaption>
+        <blockquote>"It looks like the ceiling lights are reflecting off a polished river. Nobody believes it's a floor."</blockquote>
+        <figcaption>— Commercial client · Silver Marble Hallway</figcaption>
       </figure>
       <figure class="r-card">
         <div class="stars">★★★★★</div>
-        <blockquote>"Three other shops quoted us 6 weeks. Ace Resin was in and out in 4 days and the floor is unreal. Showroom traffic up 18%."</blockquote>
-        <figcaption>— Marcus T., owner Velocity Auto, Miami</figcaption>
+        <blockquote>"The crew showed up on time, prepped clean, and the pour came out exactly like the sample. Couldn't ask for more."</blockquote>
+        <figcaption>— Barber studio owner · Crimson + Gold Metallic</figcaption>
       </figure>
       <figure class="r-card">
         <div class="stars">★★★★★</div>
-        <blockquote>"I cried when they pulled the tape. It looks like the ocean is moving inside my living room floor."</blockquote>
-        <figcaption>— Dana W., Naples FL · 240 sqft Ocean Pour</figcaption>
+        <blockquote>"We wanted something nobody else in town had. The bronze pour stops every customer who walks in."</blockquote>
+        <figcaption>— Restaurant owner · Bronze Metallic Floor</figcaption>
       </figure>
       <figure class="r-card">
         <div class="stars">★★★★★</div>
-        <blockquote>"We've used Ace for 14 restaurant builds now. They've never missed a deadline. Never had a callback. Worth every penny."</blockquote>
-        <figcaption>— Chef J. Alvarez, ALVA Hospitality Group</figcaption>
+        <blockquote>"Quoted, prepped and poured in under a week. Three years later there's not a single chip."</blockquote>
+        <figcaption>— Retail client · Rose Quartz Marble</figcaption>
       </figure>
     </div>
   </div>
@@ -370,8 +345,8 @@
         <li>✓ No obligation. No upsell scripts. Ever.</li>
       </ul>
       <div class="q-contact">
-        <a href="tel:+18555ACE-POUR">📞 1-855-ACE-POUR</a>
         <a href="mailto:hello@aceresin.com">✉ hello@aceresin.com</a>
+        <a href="https://www.instagram.com/aceresin/" target="_blank" rel="noopener">@aceresin on IG</a>
       </div>
     </div>
 
@@ -427,8 +402,8 @@
     <h2 class="display final">
       Your <span class="gradient-text">forever floor</span><br/>is one phone call away.
     </h2>
-    <a class="btn btn-primary btn-xl" href="#quote">Get my free design quote →</a>
-    <div class="final-mini">or call <a href="tel:+18555ACE-POUR">1-855-ACE-POUR</a> · open 7 days · 8am–8pm ET</div>
+    <a class="btn btn-primary btn-xl" href="#quote">Get my free quote →</a>
+    <div class="final-mini">or DM <a href="https://www.instagram.com/aceresin/" target="_blank" rel="noopener">@aceresin</a> · we reply same day</div>
   </div>
 </section>
 
@@ -437,13 +412,10 @@
   <div class="container footer-grid">
     <div>
       <a class="brand brand-foot" href="#top">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 64 64" width="28" height="28"><path d="M32 4 L58 32 L32 60 L6 32 Z" fill="url(#lg)"/><path d="M32 14 L48 32 L32 50 L16 32 Z" fill="#0b0414" opacity=".55"/></svg>
-        </span>
-        <span class="brand-text"><b>ACE</b> RESIN</span>
+        <img class="brand-logo" src="assets/logo.jpg" alt="Ace Resin" />
       </a>
       <p class="foot-tag">Hand-poured liquid glass. Guaranteed for life.</p>
-      <p class="foot-tag mini">© 2014–2026 Ace Resin Studio LLC. Licensed &amp; insured in 31 states.</p>
+      <p class="foot-tag mini">© Ace Resin Studio · Licensed &amp; insured</p>
     </div>
     <div>
       <h5>Studio</h5>
@@ -456,10 +428,9 @@
     <div>
       <h5>Contact</h5>
       <ul>
-        <li><a href="tel:+18555ACE-POUR">1-855-ACE-POUR</a></li>
         <li><a href="mailto:hello@aceresin.com">hello@aceresin.com</a></li>
-        <li>Studio: 410 Wynwood Ln, Miami FL</li>
-        <li>Instagram · @aceresin</li>
+        <li><a href="https://www.instagram.com/aceresin/" target="_blank" rel="noopener">@aceresin on IG</a></li>
+        <li>Serving the tri-state area</li>
       </ul>
     </div>
   </div>
