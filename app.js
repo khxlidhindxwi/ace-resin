@@ -50,24 +50,6 @@ if (qf) {
   });
 }
 
-// Lazy-load pour-band video only when scrolled near
-const band = document.getElementById('band-video');
-if (band && band.dataset.src) {
-  const bandIo = new IntersectionObserver((entries) => {
-    for (const e of entries) {
-      if (!e.isIntersecting) continue;
-      const src = document.createElement('source');
-      src.src = band.dataset.src;
-      src.type = 'video/mp4';
-      band.appendChild(src);
-      band.load();
-      band.play().catch(() => {});
-      bandIo.disconnect();
-    }
-  }, { rootMargin: '400px 0px' });
-  bandIo.observe(band);
-}
-
 // Skip the first 1s on hero bg video — start and on every loop
 const heroVid = document.querySelector('.hero-bg video');
 if (heroVid) {
