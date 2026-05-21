@@ -362,6 +362,22 @@ p{margin:0 0 1em;color:var(--ink-dim)}
 .footer a{font-size:14px;color:var(--ink-dim);transition:color .2s}
 .footer a:hover{color:#fff}
 
+/* ===== Mobile sticky CTA ===== */
+.mobile-cta{
+  display:none;
+  position:fixed;left:16px;right:16px;bottom:16px;z-index:60;
+  padding:16px 22px;border-radius:999px;
+  background:var(--c-blue);color:var(--c-ink);
+  font-weight:700;font-size:15px;text-align:center;
+  box-shadow:0 14px 36px -10px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.08);
+  transition:transform .2s, background .2s;
+}
+.mobile-cta:hover,.mobile-cta:focus{background:var(--c-blue-3);transform:translateY(-1px)}
+@media (max-width:1000px){
+  .mobile-cta{display:block}
+  .quote{padding-bottom:120px} /* room for sticky CTA over form */
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 1000px){
   .nav-links{display:none}
