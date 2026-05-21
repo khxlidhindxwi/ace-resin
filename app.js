@@ -32,19 +32,15 @@ document.querySelectorAll('.section-head, .svc, .gx, .steps li, .r-card, .badge'
   io.observe(el);
 });
 
-// Parallax tilt on hero cards
-const cards = document.querySelectorAll('.card-stack .card');
-const stage = document.querySelector('.hero-stage');
-if (stage && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  stage.addEventListener('mousemove', (ev) => {
-    const r = stage.getBoundingClientRect();
-    const x = (ev.clientX - r.left) / r.width - 0.5;
-    const y = (ev.clientY - r.top) / r.height - 0.5;
-    cards.forEach((c, i) => {
-      const depth = (i + 1) * 6;
-      c.style.transform = `${c.dataset.base || ''} translate3d(${x * depth}px, ${y * depth}px, 0)`;
-    });
+// Skip the first 1s on hero bg video — start and on every loop
+const heroVid = document.querySelector('.hero-bg video');
+if (heroVid) {
+  const SKIP = 1.0;
+  const seekIn = () => { try { heroVid.currentTime = SKIP; } catch(_) {} };
+  heroVid.addEventListener('loadedmetadata', seekIn);
+  // `loop` doesn't fire `ended` — use timeupdate to catch near-end and rewind to SKIP
+  heroVid.addEventListener('timeupdate', () => {
+    if (heroVid.duration && heroVid.currentTime > heroVid.duration - 0.15) seekIn();
   });
-  cards.forEach(c => { c.dataset.base = getComputedStyle(c).transform === 'none' ? '' : getComputedStyle(c).transform; });
-  stage.addEventListener('mouseleave', () => cards.forEach(c => c.style.transform = ''));
+  if (heroVid.readyState >= 1) seekIn();
 }
